@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Moe Kyaw Aung — Senior Android Developer. Kotlin, Jetpack Compose, Firebase, CI/CD, premium terminal portfolio." />
+  <meta name="theme-color" content="#07111f" />
+  <meta property="og:title" content="Moe Kyaw Aung Portfolio" />
+  <meta property="og:description" content="Premium terminal-style Android developer portfolio with multilingual support." />
+  <meta property="og:image" content="https://res.cloudinary.com/dye5qpwii/image/upload/v1778527878/IMG_20260430_053105_uef0yr.png" />
+  <title>Moe-Kyaw-Aung-Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="preloader" class="preloader"><div class="loader"></div></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <header class="nav-wrap">
+    <nav class="navbar navbar-expand-lg navbar-dark container-xl py-3">
+      <a class="navbar-brand mono" href="#home">MKA<span class="accent">.dev</span></a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#home" data-i18n="nav.home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav.about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#apps" data-i18n="nav.apps">Apps</a></li>
+          <li class="nav-item"><a class="nav-link" href="#collections" data-i18n="nav.collections">Collections</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <div class="d-flex gap-2 align-items-center ms-lg-3">
+          <div class="lang-switch">
+            <button class="btn btn-sm lang-btn" data-lang="en">EN</button>
+            <button class="btn btn-sm lang-btn" data-lang="my">မြန်မာ</button>
+          </div>
+          <button class="btn btn-outline-light btn-sm" id="themeToggle"><i class="fa-solid fa-moon"></i></button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <canvas id="bgCanvas" aria-hidden="true"></canvas>
+      <div class="container-xl hero-grid">
+        <div class="hero-card reveal">
+          <div class="kicker mono" data-i18n="hero.kicker">⭐MOE KYAW AUNG ⭐ANDROID SENIOR DEVELOPER</div>
+          <h1 class="hero-title mono" data-i18n="hero.title">မိုးကျော်အောင် · Moe Kyaw Aung</h1>
+          <p class="hero-sub" data-i18n="hero.desc">Android Developer with nearly 12 years of hands-on experience building secure, scalable, and user-friendly mobile applications.</p>
+          <div class="stats">
+            <div class="stat"><div class="num mono" data-target="10">0</div><div class="label" data-i18n="stat.years">Years+</div></div>
+            <div class="stat"><div class="num mono" data-target="3000">0</div><div class="label" data-i18n="stat.apps">Apps</div></div>
+            <div class="stat"><div class="num mono" data-target="122">0</div><div class="label" data-i18n="stat.repos">Repos</div></div>
+            <div class="stat"><div class="num mono" data-target="100">0</div><div class="label" data-i18n="stat.sat">Satisfaction %</div></div>
+          </div>
+          <div class="d-flex gap-2 flex-wrap mt-3">
+            <a href="#contact" class="btn btn-cta mono" data-i18n="cta.hire">Hire Me</a>
+            <a href="#apps" class="btn btn-outline-light mono" data-i18n="cta.explore">Explore Apps</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="orb"></div>
+          <div class="ring r1"></div>
+          <div class="ring r2"></div>
+          <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778527878/IMG_20260430_053105_uef0yr.png" alt="Moe Kyaw Aung profile" class="profile" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="compact">
+      <div class="container-xl row g-4 align-items-center">
+        <div class="col-lg-7 reveal">
+          <div class="kicker mono" data-i18n="about.kicker">Advanced About</div>
+          <h2 class="section-title" data-i18n="about.title">Developer by passion, learner by nature</h2>
+          <p class="mini" data-i18n="about.desc">I focus on clean architecture, maintainable code, and practical security. Comfortable delivering features end-to-end—from UI to networking, local caching, testing, and release-ready builds.</p>
+          <div class="timeline mt-4">
+            <div class="tl-item"><div class="tl-dot"></div><h5 class="mono">Android</h5><p class="mini">Kotlin, Compose, ViewModel, Room, MVVM, Clean Architecture.</p></div>
+            <div class="tl-item"><div class="tl-dot"></div><h5 class="mono">Backend</h5><p class="mini">Firebase, REST APIs, Retrofit, caching, notifications.</p></div>
+            <div class="tl-item"><div class="tl-dot"></div><h5 class="mono">Delivery</h5><p class="mini">CI/CD, testing, release-ready builds, performance optimization.</p></div>
+          </div>
+        </div>
+        <div class="col-lg-5 reveal">
+          <div class="glass">
+            <h4 class="mono">Focus Map</h4>
+            <ul class="mini">
+              <li>Mobile: Kotlin · Jetpack Compose · MVVM · Clean Arch</li>
+              <li>Backend: Firebase · REST APIs · Python</li>
+              <li>Security: Ethical Hacking · Cybersecurity</li>
+              <li>AI / ML: Claude API · TFLite · On-Device ML</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="apps" class="compact">
+      <div class="container-xl">
+        <div class="kicker mono" data-i18n="apps.kicker">My Create App Collection</div>
+        <h2 class="section-title" data-i18n="apps.title">Senior-level app examples</h2>
+        <div class="masonry mt-4">
+          <article class="m-card reveal">
+            <h5 class="mono">Social Dashboard</h5>
+            <p class="mini">Live dashboard and admin controls. <a href="https://github.com/moekyawaung-tech/social-dashboard" target="_blank">GitHub</a></p>
+            <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795822/preview_dzhqvv.webp" alt="Social dashboard preview" loading="lazy">
+          </article>
+          <article class="m-card reveal">
+            <h5 class="mono">PWA App</h5>
+            <p class="mini">Offline-first installable experience. <a href="https://github.com/moekyawaung-tech/pwa-app" target="_blank">GitHub</a></p>
+            <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795799/2024119_20_b94fen.jpg" alt="PWA preview" loading="lazy">
+          </article>
+          <article class="m-card reveal">
+            <h5 class="mono">Video Player</h5>
+            <p class="mini">Custom media player. <a href="https://github.com/moekyawaung-tech/video-player" target="_blank">GitHub</a></p>
+            <button class="btn btn-outline-light btn-sm" data-light="https://res.cloudinary.com/dye5qpwii/video/upload/v1779031596/Javier_Pardina_10_wttux4.mp4" data-type="video">Preview</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="collections" class="compact">
+      <div class="container-xl row g-4">
+        <div class="col-lg-7 reveal">
+          <div class="kicker mono" data-i18n="collections.kicker">GitHub Collections</div>
+          <h2 class="section-title" data-i18n="collections.title">Repository network and pages</h2>
+          <div id="ghCards" class="gh-grid"></div>
+        </div>
+        <div class="col-lg-5 reveal">
+          <div class="glass">
+            <h4 class="mono">Links</h4>
+            <div class="chip-list">
+              <a class="chip" href="https://moekyawaung.lovable.app" target="_blank">Lovable</a>
+              <a class="chip" href="https://gravatar.com/moekyawaung13721" target="_blank">Gravatar</a>
+              <a class="chip" href="https://github.com/Dev-moe-kyawaung/" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="compact">
+      <div class="container-xl row g-4">
+        <div class="col-lg-6 reveal">
+          <form id="contactForm" class="glass">
+            <h3 class="mono">Contact</h3>
+            <input class="form-control mb-2" placeholder="Name" required>
+            <input class="form-control mb-2" placeholder="Email" type="email" required>
+            <textarea class="form-control mb-2" placeholder="Project brief" rows="5" required></textarea>
+            <button class="btn btn-cta mono w-100" type="submit">Send Inquiry</button>
+          </form>
+        </div>
+        <div class="col-lg-6 reveal">
+          <div class="glass">
+            <h3 class="mono">Direct</h3>
+            <p class="mini">Email: moekyawaung@programmer.net</p>
+            <p class="mini">Phone: +95 9 889 000 889</p>
+            <iframe class="map" src="https://www.google.com/maps?q=Tachileik%2C%20Myanmar&output=embed" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container-xl d-flex justify-content-between flex-wrap gap-2">
+      <span class="mono">Moe-Kyaw-Aung-Portfolio</span>
+      <span>© 2026</span>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+    <button id="lbClose" class="close-btn">Close</button>
+    <div id="lbMedia"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
